@@ -1,29 +1,6 @@
-/*!
- 52-deck
- Copyright (C) 2016 Marco Casula
+// @flow
 
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License along
- with this program; if not, write to the Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
- @flow
- */
-
-export type Card = {
-  text: string,
-  suite: string,
-  value: number,
-  color: string
-}
+import type { Card } from './type'
 
 export const isNull = (obj: ?any): boolean => obj === null
 
@@ -31,9 +8,9 @@ export const isUndefined = (obj: ?any): boolean => obj === undefined
 
 export const isNullOrUndef = (obj: ?any): boolean => isUndefined(obj) || isNull(obj)
 
-export const cardName = (number: number): ?string => {
+export const cardName = (number: number): string => {
   if (isNullOrUndef(number)) {
-    return null
+    throw Error('Invalid number')
   }
   switch (number) {
     case 1: {
@@ -54,7 +31,7 @@ export const cardName = (number: number): ?string => {
   }
 }
 
-export const suiteName = (suite: string): ?string => {
+export const suiteName = (suite: string): string => {
   switch (suite.toLowerCase()) {
     case '♥':
     case 'h':
@@ -81,12 +58,12 @@ export const suiteName = (suite: string): ?string => {
       return 'spades'
     }
     default: {
-      return null
+      throw Error('invalid suite')
     }
   }
 }
 
-export const suiteColor = (suite: ?string): ?string => {
+export const suiteColor = (suite: ?string): string => {
   switch (suite) {
     case 'hearts':
       return 'R'
@@ -97,7 +74,7 @@ export const suiteColor = (suite: ?string): ?string => {
     case 'spades':
       return 'B'
     default:
-      return null
+      throw Error('invalid suite')
   }
 }
 
@@ -105,9 +82,6 @@ export const cardValue = (number: number): number => number < 10 ? number : 10
 
 export const makeCard = (number: number, suite: string): Card => {
   const _suite = suiteName(suite)
-  if (isNullOrUndef(_suite)) {
-    throw Error('Unknown suite')
-  }
   return {
     text: cardName(number),
     suite: _suite,
