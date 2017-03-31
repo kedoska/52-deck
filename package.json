@@ -1,6 +1,6 @@
 {
   "name": "52-deck",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Make 52 cards deck",
   "main": "build/index.js",
   "scripts": {
@@ -16,14 +16,14 @@
   },
   "keywords": [
     "nodejs",
-    "games",
-    "blackjack"
+    "cards",
+    "deck"
   ],
   "engines": {
     "node": ">=6.9.1"
   },
   "author": "Marco Casula <marco.casula@linux.com>",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
