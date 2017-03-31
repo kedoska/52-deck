@@ -32,6 +32,14 @@ const [ firstCard, secondCard ] = serializeCards('♦K ♦2')
 
 ```
 
+Valid input strings are:
+
+ - `h1 s1 d12`
+ - `11d 9s 9d 4s 12h 13d 13h 11h`
+ - `♠10 ♦1 ♥5 ♣6 ♠11 ♦10`
+ - `1-h 10-s`
+ - `12spades 8diamond`
+
 ### Card Model
 
 ```javascript
