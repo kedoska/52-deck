@@ -1,0 +1,39 @@
+{
+  "name": "52-deck",
+  "version": "0.1.0",
+  "description": "Make 52 cards deck",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "neutrino test --presets neutrino-preset-node neutrino-preset-jest",
+    "build": "neutrino build --presets neutrino-preset-standard neutrino-preset-node neutrino-middleware-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kedoska/52-deck"
+  },
+  "bugs": {
+    "url": "https://github.com/kedoska/52-deck/issues"
+  },
+  "keywords": [
+    "nodejs",
+    "games",
+    "blackjack"
+  ],
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "author": "Marco Casula <marco.casula@linux.com>",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "flow-bin": "^0.42.0",
+    "neutrino": "^4.3.1",
+    "neutrino-middleware-minify": "^5.0.0-beta.1",
+    "neutrino-preset-jest": "^4.3.0",
+    "neutrino-preset-node": "^4.2.2",
+    "neutrino-preset-standard": "^4.3.3"
+  }
+}
