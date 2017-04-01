@@ -1,8 +1,15 @@
 # 52-deck
 
-#### Installation
+<p align="center">
+<a href="https://travis-ci.org/kedoska/52-deck"><img src="https://travis-ci.org/kedoska/52-deck.svg" alt="build:"></a>
+<a href="https://david-dm.org/kedoska/52-deck/"><img src="https://david-dm.org/kedoska/52-deck/status.svg" alt="Dependency Status"></a>
+<a href="https://david-dm.org/kedoska/52-deck/?type=dev"><img src="https://david-dm.org/kedoska/52-deck/dev-status.svg" alt="devDependency Status"></a>
+</p>
 
-`yarn add 52-deck` or `npm install 52-deck`
+#### Installation (2.46 kB)
+
+ * `yarn add 52-deck`
+ * or `npm install 52-deck`
 
 ### Usage
 
