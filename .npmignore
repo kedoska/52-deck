@@ -3,3 +3,6 @@ src
 .github
 .travis.yml
 .babelrc
+.flowconfig
+.idea
+yarn.lock
